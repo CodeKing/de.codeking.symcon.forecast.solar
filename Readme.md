@@ -5,7 +5,7 @@
 <a href="https://www.paypal.me/codeking" target="_blank">![Donate](https://img.shields.io/badge/Donate-Paypal-009cde.svg)</a>
 
 # Features
-* get production forecast data for solar panels
+* get production forecast data for solar panels at your location
 
 # Donations
 If you'd like to support further development of this module, please use the donate link below.
