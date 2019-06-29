@@ -8,6 +8,7 @@
       "Error: Could not connect to forecast.solar api.": "Fehler: Konnte keine Verbindung zur forecast.solar API herstellen.",
       "Please provide your latitude and longitude in the location control module!": "Bitte gib den Längen- und Breitengrad im Location Modul in den Kern Instanzen an!",
       "Rate Limit of 12 calls per hour has been reached.": "Das Limit von 12 Abfragen für diese Stunde wurde erreicht.",
+      "Update Data": "Daten aktualisieren",
       "Roof Orientation": "Dachausrichtung",
       "Panel Orientation": "Modulneigung",
       "Rated Power": "Nennleistung",
@@ -22,7 +23,10 @@
       "total earnings today": "Gesamtertrag heute",
       "total earnings tomorrow": "Gesamtetrag morgen",
       "max. earnings per hour today": "max. Ertrag innerhalb einer Stunde heute",
-      "max. earnings per hour tomorrow": "max. Ertrag innerhalb einer Stunde morgen"
+      "max. earnings per hour tomorrow": "max. Ertrag innerhalb einer Stunde morgen",
+      "The data will be updated every hour. More than 12 api requests per hour will be blocked by the api.": "Die Daten werden stündlich aktualisiert. Mehr als 12 Abfragen pro Stunde werden API-seitig blockiert.",
+      "___ [ Logging ] ________________________________________________________________________________________": "___ [ Debug Log ] _____________________________________________________________________________________________",
+      "enable logging": "Log Meldungen aktivieren"
     }
   }
 }

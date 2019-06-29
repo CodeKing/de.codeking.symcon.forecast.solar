@@ -17,17 +17,8 @@
       "label": "___ [ Settings ] ________________________________________________________________________________________________"
     },
     {
-      "name": "kwp",
-      "type": "NumberSpinner",
-      "caption": "Rated Power",
-      "digits": 1,
-      "suffix": "kWp"
-    },
-    {
-      "name": "dec",
-      "type": "NumberSpinner",
-      "caption": "Panel Orientation",
-      "suffix": "°"
+      "type": "Label",
+      "label": "The data will be updated every hour. More than 12 api requests per hour will be blocked by the api."
     },
     {
       "type": "Select",
@@ -67,6 +58,28 @@
           "value": 180
         }
       ]
+    },
+    {
+      "name": "kwp",
+      "type": "NumberSpinner",
+      "caption": "Rated Power",
+      "digits": 1,
+      "suffix": "kWp"
+    },
+    {
+      "name": "dec",
+      "type": "NumberSpinner",
+      "caption": "Panel Orientation",
+      "suffix": "°"
+    },
+    {
+      "type": "Label",
+      "label": "___ [ Logging ] ________________________________________________________________________________________"
+    },
+    {
+      "type": "CheckBox",
+      "name": "log",
+      "caption": "enable logging"
     }
   ],
   "status": [

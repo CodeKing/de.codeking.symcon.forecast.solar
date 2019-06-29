@@ -122,31 +122,34 @@ class ForecastSolar extends Module
             // convert yaml to array
             $mapped_data = [];
             foreach (explode("\n", $data) AS $line) {
-                list($key, $value) = explode(';', $line);
+                if (strlen($line) > 5) {
+                    list($key, $value) = explode(';', $line);
 
-                // trim pairs
-                $key = trim($key);
-                $value = trim($value);
+                    // trim pairs
+                    $key = trim($key);
+                    $value = trim($value);
 
-                // get date from key
-                list($key, $date) = explode('.', $key);
+                    // get date from key
+                    list($key, $date) = explode('.', $key);
 
-                // create array
-                if (!isset($mapped_data[$key])) {
-                    $mapped_data[$key] = [];
+                    // create array
+                    if (!isset($mapped_data[$key])) {
+                        $mapped_data[$key] = [];
+                    }
+
+                    // append value
+                    $mapped_data[$key][$date] = (float)$value / 1000;
                 }
-
-                // append value
-                $mapped_data[$key][$date] = (float)$value / 1000;
             }
 
             // map data
             $this->data = [
                 'total earnings today' => 0,
-                'max. earnings per hour today' => 0,
                 'total earnings tomorrow' => 0,
+                'max. earnings per hour today' => 0,
                 'max. earnings per hour tomorrow' => 0
             ];
+
             if (isset($mapped_data['watts'])) {
                 foreach ($mapped_data AS $key => $values) {
                     switch ($key):
@@ -197,87 +200,6 @@ class ForecastSolar extends Module
      */
     private function GetData()
     {
-        $this->SetStatus(102);
-        return 'watts.2019-06-29 05:11:00;0
-watts.2019-06-29 05:36:00;21
-watts.2019-06-29 06:00:00;145
-watts.2019-06-29 07:00:00;393
-watts.2019-06-29 08:00:00;814
-watts.2019-06-29 09:00:00;1725
-watts.2019-06-29 10:00:00;2870
-watts.2019-06-29 11:00:00;4023
-watts.2019-06-29 12:00:00;4499
-watts.2019-06-29 13:00:00;5099
-watts.2019-06-29 14:00:00;5292
-watts.2019-06-29 15:00:00;4947
-watts.2019-06-29 16:00:00;4347
-watts.2019-06-29 17:00:00;3436
-watts.2019-06-29 18:00:00;2284
-watts.2019-06-29 19:00:00;1242
-watts.2019-06-29 20:00:00;435
-watts.2019-06-29 20:52:00;62
-watts.2019-06-29 21:44:00;0
-watts.2019-06-30 05:12:00;0
-watts.2019-06-30 05:36:00;14
-watts.2019-06-30 06:00:00;124
-watts.2019-06-30 07:00:00;338
-watts.2019-06-30 08:00:00;704
-watts.2019-06-30 09:00:00;1518
-watts.2019-06-30 10:00:00;2532
-watts.2019-06-30 11:00:00;3554
-watts.2019-06-30 12:00:00;4409
-watts.2019-06-30 13:00:00;4996
-watts.2019-06-30 14:00:00;5189
-watts.2019-06-30 15:00:00;4975
-watts.2019-06-30 16:00:00;4382
-watts.2019-06-30 17:00:00;3464
-watts.2019-06-30 18:00:00;2360
-watts.2019-06-30 19:00:00;1283
-watts.2019-06-30 20:00:00;449
-watts.2019-06-30 20:52:00;62
-watts.2019-06-30 21:43:00;0
-watt_hours.2019-06-29 05:11:00;0
-watt_hours.2019-06-29 05:36:00;7
-watt_hours.2019-06-29 06:00:00;69
-watt_hours.2019-06-29 07:00:00;462
-watt_hours.2019-06-29 08:00:00;1277
-watt_hours.2019-06-29 09:00:00;3002
-watt_hours.2019-06-29 10:00:00;5872
-watt_hours.2019-06-29 11:00:00;9895
-watt_hours.2019-06-29 12:00:00;14393
-watt_hours.2019-06-29 13:00:00;19493
-watt_hours.2019-06-29 14:00:00;24785
-watt_hours.2019-06-29 15:00:00;29732
-watt_hours.2019-06-29 16:00:00;34079
-watt_hours.2019-06-29 17:00:00;37515
-watt_hours.2019-06-29 18:00:00;39799
-watt_hours.2019-06-29 19:00:00;41041
-watt_hours.2019-06-29 20:00:00;41476
-watt_hours.2019-06-29 20:52:00;41524
-watt_hours.2019-06-29 21:44:00;41524
-watt_hours.2019-06-30 05:12:00;0
-watt_hours.2019-06-30 05:36:00;7
-watt_hours.2019-06-30 06:00:00;55
-watt_hours.2019-06-30 07:00:00;393
-watt_hours.2019-06-30 08:00:00;1097
-watt_hours.2019-06-30 09:00:00;2615
-watt_hours.2019-06-30 10:00:00;5147
-watt_hours.2019-06-30 11:00:00;8701
-watt_hours.2019-06-30 12:00:00;13110
-watt_hours.2019-06-30 13:00:00;18106
-watt_hours.2019-06-30 14:00:00;23294
-watt_hours.2019-06-30 15:00:00;28269
-watt_hours.2019-06-30 16:00:00;32651
-watt_hours.2019-06-30 17:00:00;36115
-watt_hours.2019-06-30 18:00:00;38474
-watt_hours.2019-06-30 19:00:00;39758
-watt_hours.2019-06-30 20:00:00;40206
-watt_hours.2019-06-30 20:52:00;40262
-watt_hours.2019-06-30 21:43:00;40262
-watt_hours_day.2019-06-29;41524
-watt_hours_day.2019-06-30;40262';
-
-
         // get lat / lon by location module
         $location_id = $this->_getLocationId();
 
@@ -328,6 +250,9 @@ watt_hours_day.2019-06-30;40262';
         $response = curl_exec($ch);
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
+
+        // log response
+        $this->_log('Forecast.Solar', $response);
 
         // check & response data
         if ($http_code == 200 && $response && strstr($response, 'watt_hours_day')) {
