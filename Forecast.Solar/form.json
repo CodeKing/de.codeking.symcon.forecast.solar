@@ -1,0 +1,101 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "label": "___ [ Support ] ________________________________________________________________________________________"
+    },
+    {
+      "type": "Label",
+      "label": "If you like this module and want to support further development of my symcon modules, feel free to donate at www.paypal.me/codeking"
+    },
+    {
+      "type": "Label",
+      "label": "www.paypal.me/codeking"
+    },
+    {
+      "type": "Label",
+      "label": "___ [ Settings ] ________________________________________________________________________________________________"
+    },
+    {
+      "name": "kwp",
+      "type": "NumberSpinner",
+      "caption": "Rated Power",
+      "digits": 1,
+      "suffix": "kWp"
+    },
+    {
+      "name": "dec",
+      "type": "NumberSpinner",
+      "caption": "Panel Orientation",
+      "suffix": "°"
+    },
+    {
+      "type": "Select",
+      "name": "az",
+      "caption": "Roof Orientation",
+      "options": [
+        {
+          "caption": "South",
+          "value": 0
+        },
+        {
+          "caption": "South West",
+          "value": 45
+        },
+        {
+          "caption": "West",
+          "value": 90
+        },
+        {
+          "caption": "North West",
+          "value": 135
+        },
+        {
+          "caption": "South East",
+          "value": -45
+        },
+        {
+          "caption": "East",
+          "value": -90
+        },
+        {
+          "caption": "North East",
+          "value": -135
+        },
+        {
+          "caption": "North",
+          "value": 180
+        }
+      ]
+    }
+  ],
+  "status": [
+    {
+      "code": 102,
+      "icon": "active",
+      "caption": "Connection to forecast.solar api has been established."
+    },
+    {
+      "code": 200,
+      "icon": "inactive",
+      "caption": "Error: Could not connect to forecast.solar api."
+    },
+    {
+      "code": 201,
+      "icon": "inactive",
+      "caption": "Please provide your latitude and longitude in the location control module!"
+    },
+    {
+      "code": 202,
+      "icon": "inactive",
+      "caption": "Rate Limit of 12 calls per hour has been reached."
+    }
+  ],
+  "actions": [
+    {
+      "type": "Button",
+      "label": "Update Data",
+      "onClick": "ForecastSolar_UpdateManually($id);"
+    }
+  ]
+}

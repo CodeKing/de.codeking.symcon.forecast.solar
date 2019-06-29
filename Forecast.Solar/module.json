@@ -1,0 +1,11 @@
+{
+  "id": "{D947CDAA-142A-D158-DCCF-F332C3FD4BBE}",
+  "name": "ForecastSolar",
+  "type": 3,
+  "vendor": "Forecast.Solar",
+  "aliases": [],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "ForecastSolar"
+}

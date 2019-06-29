@@ -1,0 +1,28 @@
+{
+  "translations": {
+    "de": {
+      "___ [ Settings ] ________________________________________________________________________________________": "___ [ Einstellungen ] _____________________________________________________________________________________________",
+      "___ [ Support ] ________________________________________________________________________________________": "___ [ Unterstützung ] __________________________________________________________________________________________",
+      "If you like this module and want to support further development of my symcon modules, feel free to donate at www.paypal.me/codeking": "Wenn dir dieses Modul gefällt oder du die weitere Entwicklung von IP-Symcon Modulen von mir unterstützen möchtest,\r\nkannst du mir gerne eine kleine Spende zukommen lassen.",
+      "Connection to forecast.solar api has been established.": "Die Verbindung zur forecast.solar API wurde aufgebaut.",
+      "Error: Could not connect to forecast.solar api.": "Fehler: Konnte keine Verbindung zur forecast.solar API herstellen.",
+      "Please provide your latitude and longitude in the location control module!": "Bitte gib den Längen- und Breitengrad im Location Modul in den Kern Instanzen an!",
+      "Rate Limit of 12 calls per hour has been reached.": "Das Limit von 12 Abfragen für diese Stunde wurde erreicht.",
+      "Roof Orientation": "Dachausrichtung",
+      "Panel Orientation": "Modulneigung",
+      "Rated Power": "Nennleistung",
+      "South": "Süd",
+      "South West": "Süd-West",
+      "West": "West",
+      "North West": "Nord-West",
+      "South East": "Süd-Ost",
+      "East": "Ost",
+      "North East": "Nord-Ost",
+      "North": "Nord",
+      "total earnings today": "Gesamtertrag heute",
+      "total earnings tomorrow": "Gesamtetrag morgen",
+      "max. earnings per hour today": "max. Ertrag innerhalb einer Stunde heute",
+      "max. earnings per hour tomorrow": "max. Ertrag innerhalb einer Stunde morgen"
+    }
+  }
+}
