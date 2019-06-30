@@ -231,6 +231,8 @@ class ForecastSolar extends Module
             ':kwp' => str_replace(',', '.', $this->kwp)
         ]);
 
+        $this->_log('Forecast.Solar', 'Endpoint: ' . $endpoint);
+
         // curl options
         $curlOptions = [
             CURLOPT_TIMEOUT => 10,
