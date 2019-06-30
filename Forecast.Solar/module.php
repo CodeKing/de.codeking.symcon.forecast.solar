@@ -259,13 +259,13 @@ class ForecastSolar extends Module
             $this->SetStatus(102);
 
             $next_timer = strtotime(date('Y-m-d H:00:05', strtotime('+1 hour')));
-            $this->SetTimerInterval('UpdateData', $next_timer - time() * 1000); // every hour
+            $this->SetTimerInterval('UpdateData', ($next_timer - time()) * 1000); // every hour
             return $response;
         } else if ($http_code == 429) {
             $this->SetStatus(202);
 
             $next_timer = strtotime(date('Y-m-d H:00:05', strtotime('+1 hour')));
-            $this->SetTimerInterval('UpdateData', $next_timer - time() * 1000); // every hour
+            $this->SetTimerInterval('UpdateData', ($next_timer - time()) * 1000); // every hour
             return false;
         } else {
             $this->SetStatus(200);
