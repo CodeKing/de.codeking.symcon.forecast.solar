@@ -271,7 +271,6 @@ class ForecastSolar extends Module
             return false;
         } else {
             $this->SetStatus(200);
-            $this->SetTimerInterval('UpdateData', 0); // disable timer
             return false;
         }
     }
